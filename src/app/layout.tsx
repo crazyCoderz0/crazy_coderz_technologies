@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "Crazy Coderz Technologies"
   ],
   icons: {
-    icon: "/icon"
+    icon: "/icon.svg"
   },
   openGraph: {
     title: siteConfig.name,
