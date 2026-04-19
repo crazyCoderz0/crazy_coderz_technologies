@@ -108,3 +108,4 @@ src/
 
 - Replace the demo Calendly URL in `src/app/book-meeting/page.tsx` with your real meeting link.
 - Update `NEXT_PUBLIC_SITE_URL` so canonical URLs and sitemap entries use your actual domain.
+- Current live deployment URL: `https://crazy-coderz-technologies-tsx5.vercel.app`
