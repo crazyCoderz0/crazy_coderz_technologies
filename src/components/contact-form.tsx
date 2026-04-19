@@ -1,7 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { FormEvent, useEffect, useState } from "react";
 
 import { submitToFirebase } from "@/lib/form-submissions";
 
@@ -20,13 +19,16 @@ const initialState: ContactState = {
 };
 
 export function ContactForm() {
-  const searchParams = useSearchParams();
   const [form, setForm] = useState<ContactState>(initialState);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
+  const [intent, setIntent] = useState("general-inquiry");
 
-  const intent = searchParams.get("intent") || "general-inquiry";
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setIntent(params.get("intent") || "general-inquiry");
+  }, []);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
