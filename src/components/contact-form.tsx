@@ -60,7 +60,7 @@ export function ContactForm() {
         submittedAt: new Date().toISOString()
       });
 
-      setSuccess("Thanks! Your inquiry has been submitted to Firebase successfully.");
+      setSuccess("Thanks! Your inquiry has been submitted to Crazy Coderz Team successfully.");
       setForm(initialState);
     } catch (submissionError) {
       setError(
